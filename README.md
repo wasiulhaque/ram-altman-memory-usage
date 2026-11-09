@@ -91,17 +91,6 @@ packaging/linux/package.sh     # Linux: build the .deb and .tar.gz into dist/
 On Windows, `cargo build --release` produces `target\release\ram-altman.exe`.
 The installer is built with [Inno Setup](https://jrsoftware.org/isinfo.php): `iscc /DAppVersion=0.1.0 packaging\windows\ram-altman.iss`.
 
-### Making a release
-
-Bump `version` in `Cargo.toml`, then push a tag:
-
-```bash
-git tag v0.1.0 && git push origin v0.1.0
-```
-
-GitHub Actions ([`.github/workflows/release.yml`](.github/workflows/release.yml)) builds the Windows installer, the portable exe, the `.deb` and the tarball, and attaches them all to a new GitHub Release.
-You can also run the workflow manually from the **Actions** tab to get the files as build artifacts without publishing a release.
-
 ---
 
 *Parody project, not affiliated with or endorsed by Sam Altman or OpenAI. The face is an original cartoon caricature.*
