@@ -24,6 +24,7 @@ DisableProgramGroupPage=yes
 PrivilegesRequired=lowest
 OutputDir={#Root}\dist
 OutputBaseFilename=RAM-Altman-Setup-{#AppVersion}
+LicenseFile={#Root}\LICENSE
 SetupIconFile={#Root}\assets\icon.ico
 UninstallDisplayIcon={app}\{#AppExe}
 Compression=lzma2

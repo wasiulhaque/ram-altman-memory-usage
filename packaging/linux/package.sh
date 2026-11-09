@@ -18,6 +18,18 @@ PKG=dist/deb/ram-altman_${VERSION}_amd64
 install -Dm755 "$BIN" "$PKG/usr/bin/ram-altman"
 install -Dm644 packaging/linux/ram-altman.desktop "$PKG/usr/share/applications/ram-altman.desktop"
 install -Dm644 assets/icon.png "$PKG/usr/share/icons/hicolor/256x256/apps/ram-altman.png"
+install -d "$PKG/usr/share/doc/ram-altman"
+cat > "$PKG/usr/share/doc/ram-altman/copyright" <<COPYRIGHT
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ram-altman
+
+Files: *
+Copyright: $(date +%Y) RAM Altman contributors
+License: GPL-3.0-or-later
+ On Debian systems, the full text of the GNU General Public License
+ version 3 can be found in /usr/share/common-licenses/GPL-3.
+COPYRIGHT
+chmod 644 "$PKG/usr/share/doc/ram-altman/copyright"
 mkdir -p "$PKG/DEBIAN"
 cat > "$PKG/DEBIAN/control" <<CONTROL
 Package: ram-altman
@@ -40,7 +52,7 @@ rm -rf dist/deb
 # ---- portable tarball ----
 TAR=ram-altman-${VERSION}-linux-x86_64
 mkdir -p "dist/$TAR"
-cp "$BIN" packaging/linux/ram-altman.desktop packaging/linux/install.sh "dist/$TAR/"
+cp "$BIN" packaging/linux/ram-altman.desktop packaging/linux/install.sh LICENSE "dist/$TAR/"
 cp assets/icon.png "dist/$TAR/ram-altman.png"
 chmod +x "dist/$TAR/install.sh" "dist/$TAR/ram-altman"
 tar -C dist -czf "dist/$TAR.tar.gz" "$TAR"

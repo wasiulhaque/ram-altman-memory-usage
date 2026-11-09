@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2024"
 description = "RAM Altman: Memory Is All You Need. A desktop widget that shows RAM usage and a cartoon Sam Altman who gets angrier the more RAM you leave unused."
 readme = "README.md"
+license = "GPL-3.0-or-later"
 keywords = ["ram", "memory", "widget", "desktop", "egui"]
 categories = ["gui"]
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 //! RAM Altman: Memory Is All You Need — a tiny always-on-top desktop widget that shows RAM usage
 //! and a cartoon Sam Altman whose mood depends on how much RAM you're using.
 //! Unused RAM makes him furious. Only ≥90% utilization makes him happy.

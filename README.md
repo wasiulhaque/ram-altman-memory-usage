@@ -91,6 +91,11 @@ packaging/linux/package.sh     # Linux: build the .deb and .tar.gz into dist/
 On Windows, `cargo build --release` produces `target\release\ram-altman.exe`.
 The installer is built with [Inno Setup](https://jrsoftware.org/isinfo.php): `iscc /DAppVersion=0.1.0 packaging\windows\ram-altman.iss`.
 
+## License
+
+RAM Altman is free software, licensed under the [GNU General Public License v3.0 or later](LICENSE) (GPL-3.0-or-later).
+You can use, study, share and modify it, and anything you distribute based on it must also be released under the GPL.
+
 ---
 
 *Parody project, not affiliated with or endorsed by Sam Altman or OpenAI. The face is an original cartoon caricature.*
