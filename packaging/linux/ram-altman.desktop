@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=RAM Altman
+GenericName=RAM Usage Widget
+Comment=Memory Is All You Need. Shows RAM usage with a very opinionated face.
+Exec=ram-altman
+Icon=ram-altman
+Terminal=false
+Categories=System;Monitor;
+Keywords=ram;memory;widget;monitor;
+StartupWMClass=ram-altman

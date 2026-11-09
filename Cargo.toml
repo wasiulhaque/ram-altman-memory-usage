@@ -1,0 +1,25 @@
+[package]
+name = "ram_altman"
+version = "0.1.0"
+edition = "2024"
+description = "RAM Altman: Memory Is All You Need. A desktop widget that shows RAM usage and a cartoon Sam Altman who gets angrier the more RAM you leave unused."
+readme = "README.md"
+keywords = ["ram", "memory", "widget", "desktop", "egui"]
+categories = ["gui"]
+
+[[bin]]
+name = "ram-altman"
+path = "src/main.rs"
+
+[dependencies]
+eframe = { version = "0.37", default-features = false, features = ["default_fonts", "glow", "wayland", "x11"] }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+sysinfo = "0.40.1"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+
+[target."cfg(windows)".build-dependencies]
+winresource = "0.1.34"
